@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>vorta</Name>
+  <Repository>ghcr.io/borgbase/vorta-docker</Repository>
+  <Registry>https://ghcr.io/borgbase/vorta-docker</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/186171-support-b3rrytechs-template-repository/</Support>
+  <Project>https://github.com/borgbase/vorta-docker</Project>
+  <Overview>***DESCRIPTION***  &#xD;
+This is an unRAID Docker template for **Vorta**, a GUI for BorgBackup. Vorta is a backup client primarily for macOS and Linux desktops. It integrates the mighty BorgBackup with your desktop environment to protect your data from disk failure, ransomware and theft. BorgBackup is originally a CLI based backup tool, so Vorta was created to lower the threshold and allow more people to use it.&#xD;
+&#xD;
+***NOTES***  &#xD;
+&#x2022; There are other variables available, if needed. Check the GitHub repository to know more.&#xD;
+&#x2022; The directories needed to interact with the host and/or any external device, is located under '/unraid' in the root of the container.&#xD;
+&#x2022; When restoring from an archive back to this host, this container needs to be run as Privileged. It is strongly (!) advised that you only do this during restores and toggle it off during normal use.&#xD;
+&#x2022; I'm not the author of this Docker container. I only provide the unRAID template. Any issues with the container and the application should be submitted to the official GitHub repository. Use the support thread in the forums for any problems with the template. If possible me, or someone else in the community also might be able to provide some guidance for usage.</Overview>
+  <Category>Backup:</Category>
+  <WebUI>http://[IP]:[PORT:5800]</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/b3rrytech/unraid-docker-templates/main/docker_icons/vorta/vorta-512px.png</Icon>
+  <ExtraParams>--hostname=unraid-vorta</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1747222886</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="WebUI" Target="5800" Default="5800" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">5811</Config>
+  <Config Name="Source" Target="/unraid/data" Default="/mnt/user/" Mode="ro" Description="Choose a local source directory. This is Read Only.&#13;&#10;For multiple sources add another Path. " Type="Path" Display="always" Required="true" Mask="false">/mnt/user/</Config>
+  <Config Name="Destination" Target="/unraid/destination" Default="/mnt/user/" Mode="rw" Description="Choose a local destination directory (if needed). For multiple destinations add another Path." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/</Config>
+  <Config Name="Config" Target="/config" Default="/mnt/user/appdata/vorta" Mode="rw" Description="Location for appdata." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/</Config>
+  <Config Name="Restore" Target="/restore/" Default="/mnt/user/" Mode="rw" Description="Configurable in the event you want to restore from an archive. Requires the container to be run as Privieged during restore. It's strongly recommended to only toggle Privileged on WHEN/IF you need to restore." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/</Config>
+  <Config Name="VNC password" Target="VNC_PASSWORD" Default="" Mode="" Description="Strongly recommended, but optional. Delete this variable or leave it blank if you don't need a VNC password." Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="App name" Target="APP_NAME" Default="Vorta" Mode="" Description="Title that is used in the browser." Type="Variable" Display="always" Required="false" Mask="false">Vorta</Config>
+  <Config Name="Time zone" Target="TZ" Default="Europe/Berlin" Mode="" Description="List your time zone according to the TZ identifier: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Secure connection for VNC" Target="SECURE_CONNECTION" Default="0|1" Mode="" Description="Use an encrypted connection to access the application's GUI over VNC (HTTPS). 0=off, 1=on&#13;&#10;Default: 0" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+  <Config Name="User ID" Target="USER_ID" Default="99" Mode="" Description="PUID" Type="Variable" Display="always-hide" Required="false" Mask="false">99</Config>
+  <Config Name="Group ID" Target="GROUP_ID" Default="100" Mode="" Description="PGID" Type="Variable" Display="always-hide" Required="false" Mask="false">100</Config>
+  <Config Name="Umask" Target="UMASK" Default="000" Mode="" Description="" Type="Variable" Display="always-hide" Required="false" Mask="false">000</Config>
+  <Config Name="VNC display width" Target="DISPLAY_WIDTH" Default="1280" Mode="" Description="Width (in pixels) of the application's window. Scaling is also available in the VNC webUI settings." Type="Variable" Display="always-hide" Required="false" Mask="false">1280</Config>
+  <Config Name="VNC display height" Target="DISPLAY_HEIGHT" Default="768" Mode="" Description="Height (in pixels) of the application's window.&#13;&#10;Scaling is also available in the VNC webUI settings." Type="Variable" Display="always-hide" Required="false" Mask="false">768</Config>
+  <TailscaleStateDir/>
+</Container>
