@@ -14,7 +14,7 @@ This is an unRAID Docker template for **Vorta**, a GUI for BorgBackup. Vorta is 
 &#xD;
 ***NOTES***  &#xD;
 &#x2022; There are other variables available, if needed. Check the GitHub repository to know more.&#xD;
-&#x2022; The directories needed to interact with the host and/or any external device, is located under '/unraid' in the root of the container.&#xD;
+&#x2022; The directories needed to interact with the host and/or any external device, is located under '/' in the root of the container.&#xD;
 &#x2022; When restoring from an archive back to this host, this container needs to be run as Privileged. It is strongly (!) advised that you only do this during restores and toggle it off during normal use.&#xD;
 &#x2022; I'm not the author of this Docker container. I only provide the unRAID template. Any issues with the container and the application should be submitted to the official GitHub repository. Use the support thread in the forums for any problems with the template. If possible me, or someone else in the community also might be able to provide some guidance for usage.</Overview>
   <Category>Backup:</Category>
