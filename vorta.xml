@@ -10,7 +10,7 @@
   <Support>https://forums.unraid.net/topic/186171-support-b3rrytechs-template-repository/</Support>
   <Project>https://github.com/borgbase/vorta-docker</Project>
   <Overview>***DESCRIPTION***  &#xD;
-This is an unRAID Docker template for **Vorta**, a GUI for BorgBackup. Vorta is a backup client primarily for macOS and Linux desktops. It integrates the mighty BorgBackup with your desktop environment to protect your data from disk failure, ransomware and theft. BorgBackup is originally a CLI based backup tool, so Vorta was created to lower the threshold and allow more people to use it.&#xD;
+This is an unRAID Docker template for **Vorta**, a GUI for BorgBackup. Vorta is a backup client primarily for macOS and Linux desktops. It integrates the mighty BorgBackup with your desktop environment to protect your data from disk failure, ransomware and theft. BorgBackup is originally a CLI based backup tool, so Vorta was created to lower the threshold and allow more people to use it. This containerized version of Vorta gives you access to the GUI over VNC in a browser.&#xD;
 &#xD;
 ***NOTES***  &#xD;
 &#x2022; There are other variables available, if needed. Check the GitHub repository to know more.&#xD;
