@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>Adaptec-MSM</Name>
+  <Name>adaptec-msm</Name>
   <Repository>nheinemans/storman</Repository>
   <Registry>https://hub.docker.com/r/nheinemans/storman</Registry>
   <Network>bridge</Network>
